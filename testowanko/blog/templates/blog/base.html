@@ -1,0 +1,106 @@
+
+{% load static %}
+<html lang="PL-pl">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="fotograf">
+    <meta name="keywords" content="jasiekolejarz.pl,jan olejarz,jasiek,Złotów,fotograf,fotografia,montaż,film,postprodukcja,Nowy Dwór">
+    <meta name="author" content="Jan Olejarz">
+    <meta property="og:type" content="Witaj">
+    <meta property="og:image" content="computer">
+    <meta property="og:title" content="Data Science">
+    <meta property="og:description" content="IT specialist, who would like to increase IT passion."> 
+    <meta property="og:site_name"content="Junior Frontend developer">
+    <meta property="og:url" content="data Scientist"> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/bootstrap.css' %}" >
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/astyle.css' %}" >
+    <link rel="shortcut icon" type="image/png" href="{% static "blog/camera.png" %}">
+     {% if title %}
+    <title>Jan Olejarz Fotografia</title>
+    {% else %}
+    <title>Fotografia&Film</title>
+    {% endif %}
+</head>
+<body>
+  <div >
+ <button class="hamburger"  id="submit_btn">
+    <span class="hamburger__box">
+      <span class="hamburger__inner"></span>
+    </span>
+  </button>
+  <nav>
+  <div class="navigation">
+		  <ul class=" navigation__list">
+			 <a href="{% url 'blog-home' %}"><b><h2>Jan Olejarz</h2></b></a>
+			  <p class="site-description">Fotografia&Film<p>
+			  <li class="navigation__item"><a href="{% url 'blog-home' %} "><h5>Strona główna</h5></a></li>
+			  <li class="navigation__item"><a href="{% url 'blog-base'%}"><h5>o mnie</h5></a></li>
+			  <li class="navigation__item"><a href="{% url 'blog-photo'%}"><h5>zdjęcia</h5></a></li>
+			  <li class="navigation__item"><a href="{% url 'blog-films'%}"><h5>filmy</h5></a></li>
+		  </ul> 
+      <div class="small">
+      {% load static %}
+      <a href="https://www.facebook.com/janolejarzphoto/" ><img src="{% static "blog/facebook1.png" %}" /></a>
+      <a href="https://www.instagram.com/janolejarz/" ><img src="{% static "blog/instagram.png" %}" /></a>&nbsp&nbsp
+      <a href="https://www.linkedin.com/in/jan-olejarz/?fbclid=IwAR3UNt26ctab2Qb3yZCnkHxqy2twA-8GBUbrixpUo5nEmRxh8a1j7p0zND8"><img src="{% static "blog/linkedin.png" %}" /></a>&nbsp&nbsp
+      <a href="mailto:olejarzphoto@gmail.com"><img src="{% static "blog/mail.png" %}" /></a>
+      </div>
+    </nav>
+  </div>
+
+{% block content %}
+
+{% endblock content%}
+    <footer id="sticky-footer" class="py-4 bg-black text-white-50">
+    <div class="container text-center">
+      <small>Copyright &copy; 2020  <a href="https://www.facebook.com/jasiekolejarz7331">Jan Olejarz</a>. All Rights Reserved. |  Projekt i realizacja  <a href="http://www.michalszopinski.pl">Michał Szopiński</a></small>
+    </div>
+  </footer>
+</div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.navigation');
+
+    const handleClick = () => {
+    hamburger.classList.toggle('hamburger--active');
+    nav.classList.toggle('navigation--active');
+    }
+
+    hamburger.addEventListener('click', handleClick);
+    $(function () {
+          window.onload = $('#submit_btn').click();
+      });
+    let modalId = $('#image-gallery');
+
+// MDB Lightbox Init
+$(function () {
+$("#mdb-lightbox-ui").load("mdb-addons/mdb-lightbox-ui.html");
+});
+$('.thumbnail').click(function(){
+  	$('.modal-body').empty();
+  	var title = $(this).parent('a').attr("title");
+  	$('.modal-title').html(title);
+  	$($(this).parents('div').html()).appendTo('.modal-body');
+  	$('#myModal').modal({show:true});
+});
+
+$('a.controls').click(function(){
+  
+  // Current 
+  
+  
+  alert ('control!');
+  
+  });  
+</script>
+  
+</body>
+</html> 

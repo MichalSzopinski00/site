@@ -1,0 +1,40 @@
+
+{% extends "blog/base.html" %}
+{% block content %}
+{% load static %}
+    <div class="tresci"><br>
+       <h2><b>Portfolio</b></h2>
+       <h5>kliknij aby powiększyć zdjęcie</h5><br>
+<div class="container">
+   <div class="d-flex flex-row">
+      <div class="d-flex flex-column">
+         <a target="_blank" href="{% static 'blog/1.jpg' %}"><img src="{% static 'blog/1.jpg' %}" class="img-fluid"></a>
+         <a target="_blank" href="{% static 'blog/2.jpg' %}"><img src="{% static 'blog/2.jpg' %}" class="img-fluid">
+         <a target="_blank" href="{% static 'blog/9.jpg' %}"><img src="{% static 'blog/9.jpg' %}" class="img-fluid">
+         <a target="_blank" href="{% static 'blog/18.jpg' %}"><img src="{% static 'blog/18.jpg' %}" class="img-fluid">
+         <a target="_blank" href="{% static 'blog/19.jpg' %}"><img src="{% static 'blog/14.jpg' %}" class="img-fluid">
+      </div>
+      <div class="d-flex flex-column">
+         <a target="_blank" href="{% static 'blog/4.jpg' %}"><img src="{% static 'blog/4.jpg' %}" class="img-fluid">
+         <a target="_blank" href="{% static 'blog/3.jpg' %}"><img src="{% static 'blog/3.jpg' %}" class="img-fluid">
+         <a target="_blank" href="{% static 'blog/11.jpg' %}"><img src="{% static 'blog/11.jpg' %}" class="img-fluid">
+         <a target="_blank" href="{% static 'blog/14.jpg' %}"><img src="{% static 'blog/19.jpg' %}" class="img-fluid">
+         <a target="_blank" href="{% static 'blog/17.jpg' %}"><img src="{% static 'blog/17.jpg' %}" class="img-fluid">
+         
+      </div>
+      <div class="d-flex flex-column">
+         <a target="_blank" href="{% static 'blog/5.jpg' %}"><img src="{% static 'blog/5.jpg' %}" class="img-fluid">
+         <a target="_blank" href="{% static 'blog/10.jpg' %}"><img src="{% static 'blog/10.jpg' %}" class="img-fluid">
+         <a target="_blank" href="{% static 'blog/15.jpg' %}"><img src="{% static 'blog/15.jpg' %}" class="img-fluid">
+         <a target="_blank" href="{% static 'blog/13.jpg' %}"><img src="{% static 'blog/13.jpg' %}" class="img-fluid">
+      </div>
+      <div class="d-flex flex-column">
+         <a target="_blank" href="{% static 'blog/7.jpg' %}"><img src="{% static 'blog/7.jpg' %}" class="img-fluid">
+         <a target="_blank" href="{% static 'blog/8.jpg' %}"><img src="{% static 'blog/8.jpg' %}" class="img-fluid">
+         <a target="_blank" href="{% static 'blog/12.jpg' %}"><img src="{% static 'blog/12.jpg' %}" class="img-fluid">
+         <a target="_blank" href="{% static 'blog/26.jpg' %}"><img src="{% static 'blog/16.jpg' %}" class="img-fluid">
+      </div>
+   </div>
+</div>
+</div>
+{% endblock content %}
